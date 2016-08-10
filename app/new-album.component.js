@@ -24,6 +24,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 }
                 NewAlbumComponent.prototype.addAlbum = function (addName, addArtist, addPrice, addGenre) {
                     console.log(addName.value);
+                    console.log("hello");
                     this.onSubmitForm.emit([addName.value, addArtist.value, addPrice.value, addGenre.value]);
                     addName.value = "";
                     addArtist.value = "";

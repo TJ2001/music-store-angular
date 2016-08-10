@@ -29,6 +29,7 @@ export class NewAlbumComponent {
   }
   addAlbum(addName: HTMLInputElement, addArtist: HTMLInputElement,  addPrice: HTMLInputElement, addGenre: HTMLInputElement) {
     console.log(addName.value);
+    console.log("hello");
     this.onSubmitForm.emit([addName.value, addArtist.value, addPrice.value, addGenre.value]);
     addName.value="";
     addArtist.value="";

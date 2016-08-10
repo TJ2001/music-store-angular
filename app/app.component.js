@@ -26,8 +26,8 @@ System.register(['angular2/core', './album-list.component', './album.model'], fu
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.album = [
-                        new album_model_1.Album('Second Story', 'Open House', 15, 'folk', 0),
+                    this.albums = [
+                        new album_model_1.Album('Second Story', 'Open House', 15, 'folk', 0)
                     ];
                 }
                 AppComponent.prototype.albumWasSelected = function (clickedAlbum) {
@@ -37,7 +37,7 @@ System.register(['angular2/core', './album-list.component', './album.model'], fu
                     core_1.Component({
                         selector: 'my-app',
                         directives: [album_list_component_1.AlbumListComponent],
-                        template: "\n  <div class='container'>\n    <h1>Album List</h1>\n    <album-list\n      [albumList]=\"albums\"\n      (onAlbumSelect)=\"albumWasSelected($event)\">\n    </album-list>\n  </div>\n  "
+                        template: "\n  <div class='container'>\n    <album-list\n      [albumList]=\"albums\"\n      (onAlbumSelect)=\"albumWasSelected($event)\">\n    </album-list>\n  </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

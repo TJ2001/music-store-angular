@@ -8,7 +8,6 @@ import { Album } from './album.model';
   directives: [AlbumListComponent],
   template: `
   <div class='container'>
-    <h1>Album List</h1>
     <album-list
       [albumList]="albums"
       (onAlbumSelect)="albumWasSelected($event)">
@@ -18,10 +17,10 @@ import { Album } from './album.model';
 })
 
 export class AppComponent {
-  public album: Album[];
+  public albums: Album[];
   constructor(){
-    this.album = [
-      new Album('Second Story', 'Open House', 15, 'folk', 0),
+    this.albums = [
+      new Album('Second Story', 'Open House', 15, 'folk', 0)
     ];
   }
   albumWasSelected(clickedAlbum: Album): void {
