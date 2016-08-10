@@ -10,7 +10,7 @@ export class RockPipe implements PipeTransform {
   transform = function (input: Album[]) {
     var output: Album[] = [];
     for (var i = 0; i < input.length; i++) {
-      if (input[i].rock === false) {
+      if (!(this.input[i].genre === "rock")) {
         output.push(input[i]);
       }
     }
