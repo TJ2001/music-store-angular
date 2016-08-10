@@ -31,11 +31,12 @@ export class AlbumListComponent {
     this.selectedAlbum = clickedAlbum;
     this.onAlbumSelect.emit(clickedAlbum);
   }
-  createAlbum(inputArray): void{
+  createAlbum(inputArray: string[]): void {
+    console.log("createAlbum");
     this.albumList.push(
-      new Album(inputArray[0], inputArray[1], inputArray[2], inputArray[3], this.albumList.length)
+      new Album(inputArray[0], inputArray[1], +inputArray[2], inputArray[3], this.albumList.length)
     );
-    console.log(this.albumList);
+    console.log("album list component: " + this.albumList);
     console.log(inputArray[2]);
   }
 }

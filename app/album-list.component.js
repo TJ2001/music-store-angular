@@ -37,8 +37,9 @@ System.register(['angular2/core', './album.component', './album.model', './new-a
                     this.onAlbumSelect.emit(clickedAlbum);
                 };
                 AlbumListComponent.prototype.createAlbum = function (inputArray) {
-                    this.albumList.push(new album_model_1.Album(inputArray[0], inputArray[1], inputArray[2], inputArray[3], this.albumList.length));
-                    console.log(this.albumList);
+                    console.log("createAlbum");
+                    this.albumList.push(new album_model_1.Album(inputArray[0], inputArray[1], +inputArray[2], inputArray[3], this.albumList.length));
+                    console.log("album list component: " + this.albumList);
                     console.log(inputArray[2]);
                 };
                 AlbumListComponent = __decorate([

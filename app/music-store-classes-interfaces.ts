@@ -7,6 +7,6 @@ module AlbumList {
   }
 
   export class Album implements IAlbum {
-    constructor(public name: string, public artist: string, public price: number, public genre: string) {}
+    constructor(public name: string, public artist: string, public price: number, public genre: string){}
   }
 }

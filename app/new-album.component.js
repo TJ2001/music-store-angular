@@ -23,8 +23,6 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     this.onSubmitForm = new core_1.EventEmitter();
                 }
                 NewAlbumComponent.prototype.addAlbum = function (addName, addArtist, addPrice, addGenre) {
-                    console.log(addName.value);
-                    console.log("hello");
                     this.onSubmitForm.emit([addName.value, addArtist.value, addPrice.value, addGenre.value]);
                     addName.value = "";
                     addArtist.value = "";
@@ -35,7 +33,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'new-album',
                         outputs: ['onSubmitForm'],
-                        template: "\n  <div class='container'>\n    <h2>Our Albums</h2>\n    <div class=\"form-group\">\n      <label for=\"name\">Album Title:</label>\n      <input type=\"text\" class=\"form-control input-lg\" id=\"name\" placeholder=\"Joshua Tree\" #addName required>\n      <label for=\"artist\">Artist</label>\n      <input type=\"text\" class=\"form-control input-lg\" id=\"artist\" placeholder=\"U2\" #addArtist required>\n      <label for=\"price\">Price</label>\n      <input type=\"text\" class=\"form-control input-lg\" id=\"price\" placeholder=\"13\" #addPrice required>\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control input-lg\" id=\"genre\" placeholder=\"rock\" #addGenre required>\n    </div>\n    <button (click)=\"addAlbum(addName, addArtist, addPrice, addGennre)\" class=\"btn-danger btn-lg add-button\">Add Album</button>\n  </div>\n  "
+                        template: "\n  <div class='container'>\n    <h2>Our Albums</h2>\n    <div class=\"form-group\">\n      <label for=\"name\">Album Title:</label>\n      <input type=\"text\" class=\"form-control input-lg\" id=\"name\" placeholder=\"Joshua Tree\" #addName>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"artist\">Artist</label>\n      <input type=\"text\" class=\"form-control input-lg\" id=\"artist\" placeholder=\"U2\" #addArtist>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"price\">Price</label>\n      <input type=\"text\" class=\"form-control input-lg\" id=\"price\" placeholder=\"13\" #addPrice>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"genre\">Genre</label>\n      <input type=\"text\" class=\"form-control input-lg\" id=\"genre\" placeholder=\"U2\" #addGenre>\n    </div>\n    <button (click)=\"addAlbum(addName, addArtist, addPrice, addGenre)\" class=\"btn-danger btn-lg add-button\">Add Album</button>\n  </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], NewAlbumComponent);
