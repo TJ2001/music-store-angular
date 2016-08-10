@@ -19,10 +19,13 @@ import {Album} from './album.model';
       <label for="price">Price</label>
       <input type="text" class="form-control input-lg" id="price" placeholder="13" #addPrice>
     </div>
-    <div class="form-group">
-      <label for="genre">Genre</label>
-      <input type="text" class="form-control input-lg" id="genre" placeholder="U2" #addGenre>
-    </div>
+    <select class="filter" #addGenre>
+      <option>Classical</option>
+      <option selected="selected">Folk</option>
+      <option>Rock</option>
+      <option>Rap</option>
+      <option>Country</option>
+    </select>
     <button (click)="addAlbum(addName, addArtist, addPrice, addGenre)" class="btn-danger btn-lg add-button">Add Album</button>
   </div>
   `

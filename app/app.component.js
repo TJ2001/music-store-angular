@@ -27,7 +27,10 @@ System.register(['angular2/core', './album-list.component', './album.model'], fu
             AppComponent = (function () {
                 function AppComponent() {
                     this.albums = [
-                        new album_model_1.Album('Second Story', 'Open House', 15, 'folk', 0)
+                        new album_model_1.Album('Second Story', 'Open House', 15, 'folk', 0),
+                        new album_model_1.Album('Basket Case', 'Green Day', 13, 'rock', 1),
+                        new album_model_1.Album('If the Cap Fits', 'Kevin Burke', 20, 'folk', 2),
+                        new album_model_1.Album('Abbey Road', 'Beattles', 18, 'rock', 3)
                     ];
                 }
                 AppComponent.prototype.albumWasSelected = function (clickedAlbum) {

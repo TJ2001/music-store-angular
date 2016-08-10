@@ -1,4 +1,4 @@
-System.register(['angular2/core', './album.component', './album.model', './new-album.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './album.component', './album.model', './new-album.component', './rock.pipe'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './album.component', './album.model', './new-a
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, album_component_1, album_model_1, new_album_component_1;
+    var core_1, album_component_1, album_model_1, new_album_component_1, rock_pipe_1;
     var AlbumListComponent;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['angular2/core', './album.component', './album.model', './new-a
             },
             function (new_album_component_1_1) {
                 new_album_component_1 = new_album_component_1_1;
+            },
+            function (rock_pipe_1_1) {
+                rock_pipe_1 = rock_pipe_1_1;
             }],
         execute: function() {
             AlbumListComponent = (function () {
@@ -47,8 +50,9 @@ System.register(['angular2/core', './album.component', './album.model', './new-a
                         selector: 'album-list',
                         inputs: ['albumList'],
                         outputs: ['onAlbumSelect'],
+                        pipes: [rock_pipe_1.RockPipe],
                         directives: [new_album_component_1.NewAlbumComponent, album_component_1.AlbumComponent],
-                        template: "\n    <new-album (onSubmitForm)=\"createAlbum($event)\"></new-album>\n    <h1>Album List</h1>\n    <album-display *ngFor=\"#currentAlbum of albumList\"\n      [class.slected]=\"currentAlbum === selectedAlbum\"\n      (click)=\"albumClicked(currentAlbum)\"\n      [album]=\"currentAlbum\">\n    </album-display>\n  "
+                        template: "\n    <new-album (onSubmitForm)=\"createAlbum($event)\"></new-album>\n    <h1>Album List</h1>\n    <album-display *ngFor=\"#currentAlbum of albumList | rock\"\n      [class.slected]=\"currentAlbum === selectedAlbum\"\n      (click)=\"albumClicked(currentAlbum)\"\n      [album]=\"currentAlbum\">\n    </album-display>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AlbumListComponent);
